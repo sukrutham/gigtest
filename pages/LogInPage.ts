@@ -7,28 +7,28 @@ export class LoginPage extends Page {
     super(browser);
   }
 
-    @findBy('css', '.page-heading')
+  @findBy('css', '.page-heading')
   public pageHeading!: WebComponent;
 
-    @findBy('css', '.#email')
+  @findBy('css', '.#email')
   public emailTextbox!: WebComponent;
 
-    @findBy('id', 'passwd')
+  @findBy('id', 'passwd')
   public passwordTextbox!: WebComponent;
 
-    @findBy('name', 'SubmitLogin')
+  @findBy('name', 'SubmitLogin')
   public signInButton!: WebComponent;
 
 
-    public isPageLoaded() {
-        return elementIsVisible(() => this.pageHeading);
-      }
+  public isPageLoaded() {
+    return elementIsVisible(() => this.pageHeading);
+  }
 
-      public async login(userName:string,password:string){
-        await this.emailTextbox.enterText(userName);
-        await this.passwordTextbox.enterText(password);
-        await this.signInButton.click();
-        await this.browser.waitAny(pageHasLoaded(HomePage));
-      }
+  public async login(userName: string, password: string) {
+    await this.emailTextbox.enterText(userName);
+    await this.passwordTextbox.enterText(password);
+    await this.signInButton.click();
+    await this.browser.waitAny(pageHasLoaded(HomePage));
+  }
 }
 

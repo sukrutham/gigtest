@@ -29,7 +29,7 @@ class WebComponentEnsurer {
 
 export function ensure(component: WebComponent): WebComponentEnsurer;
 export function ensure(component: WebComponent): any {
-   if (component instanceof WebComponent) {
-      return new WebComponentEnsurer(component);
+  if (component instanceof WebComponent) {
+    return new WebComponentEnsurer(component);
   }
 }
