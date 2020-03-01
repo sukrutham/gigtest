@@ -30,4 +30,10 @@ export class WebComponent {
   public async getText() {
     return await this.element.getText();
   }
+
+  public async mouseHover() {
+    this.isDisplayed();
+    return await (await this.element).getDriver().actions().mouseMove(this.element).perform();
+  }
+
 }  

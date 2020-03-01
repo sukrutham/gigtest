@@ -14,6 +14,8 @@ export class HomePage extends Page {
      @findBy("css", ".login")
    public signIn!: WebComponent;
      
+   @findBy("name", "search_query")
+   public searchBox!: WebComponent;
 
      public isPageLoaded() {
         return elementIsVisible(() => this.homeTitle);

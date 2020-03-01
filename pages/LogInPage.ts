@@ -8,16 +8,16 @@ export class LoginPage extends Page {
   }
 
     @findBy('css', '.page-heading')
-  public pageHeading: WebComponent;
+  public pageHeading!: WebComponent;
 
     @findBy('css', '.#email')
-  public emailTextbox: WebComponent;
+  public emailTextbox!: WebComponent;
 
     @findBy('id', 'passwd')
-  public passwordTextbox: WebComponent;
+  public passwordTextbox!: WebComponent;
 
     @findBy('name', 'SubmitLogin')
-  public signInButton: WebComponent;
+  public signInButton!: WebComponent;
 
 
     public isPageLoaded() {
