@@ -1,5 +1,4 @@
 import { specification, action, when, then } from "../generics/mocha-bdd";
-
 import { AllPages } from "../pages";
 import { Browser, ensure } from "../generics";
 
