@@ -1,5 +1,5 @@
 import { Page, Browser, findBy, elementIsVisible, WebComponent, pageHasLoaded } from "../generics";
-import { LoginPage } from "./LogInPage";
+import { LoginPage,SearchResultsPage } from ".";
 
 
 export class HomePage extends Page {
@@ -17,6 +17,10 @@ export class HomePage extends Page {
    @findBy("name", "search_query")
    public searchBox!: WebComponent;
 
+   @findBy("name", "submit_search")
+   public submitSearch!: WebComponent;
+
+
      public isPageLoaded() {
         return elementIsVisible(() => this.homeTitle);
       }
@@ -26,5 +30,12 @@ export class HomePage extends Page {
         await this.signIn.click();
         await this.browser.waitAny(pageHasLoaded(LoginPage));
       }
+
+      public async searchForProduct(productQuery:string): Promise<void> {
+        await this.searchBox.enterText(productQuery);
+        await this.submitSearch.click();
+        await this.browser.waitAny(pageHasLoaded(SearchResultsPage));
+      }
+
 
 }
