@@ -1,0 +1,37 @@
+{
+  "name": "gig",
+  "version": "1.0.0",
+  "description": "BDD Test framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bdd": "rm -rf dist && tsc && mocha -t 10000 dist/specs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sukrutham/gigtest.git"
+  },
+  "keywords": [
+    "selenium",
+    "bdd",
+    "typescript"
+  ],
+  "author": "sukrutha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sukrutham/gigtest/issues"
+  },
+  "homepage": "https://github.com/sukrutham/gigtest#readme",
+  "dependencies": {
+    "@types/mocha": "^7.0.1",
+    "@types/node": "^13.7.7",
+    "@types/selenium-webdriver": "^4.0.8",
+    "chromedriver": "^80.0.1",
+    "geckodriver": "^1.19.1",
+    "mocha": "^7.1.0",
+    "reflect-metadata": "^0.1.13",
+    "selenium-webdriver": "^4.0.0-alpha.5",
+    "tslint": "^6.0.0",
+    "typescript": "^3.8.3"
+  }
+}

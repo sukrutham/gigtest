@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "strict": true,
+    "outDir": "dist",
+    "lib": [
+      "ES2015"
+    ],
+    "types": [ "mocha", "node" ],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  }
+}
