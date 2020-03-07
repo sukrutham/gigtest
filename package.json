@@ -4,7 +4,7 @@
   "description": "BDD Test framework",
   "main": "index.js",
   "scripts": {
-    "test": "mocha 'test/**/*.ts'"
+    "test": "mocha -r ts-node/register 'test/**/*.ts'"
   },
   "repository": {
     "type": "git",
@@ -23,14 +23,18 @@
   "homepage": "https://github.com/sukrutham/gigtest#readme",
   "dependencies": {
     "@types/mocha": "^7.0.1",
-    "@types/node": "^13.7.7",
+    "@types/node": "^13.9.0",
     "@types/selenium-webdriver": "^4.0.8",
     "chromedriver": "^80.0.1",
+    "dotenv": "^8.2.0",
     "geckodriver": "^1.19.1",
     "mocha": "^7.1.0",
     "reflect-metadata": "^0.1.13",
     "selenium-webdriver": "^4.0.0-alpha.5",
     "tslint": "^6.0.0",
     "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "ts-node": "^8.6.2"
   }
 }
